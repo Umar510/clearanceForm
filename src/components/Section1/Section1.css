@@ -1,0 +1,20 @@
+.heading-sec1{
+    border-block: 1px solid gray;
+    margin-block: 40px;
+    padding-block: 15px;
+    margin-top: 80px;
+    text-align: center;
+}
+.row{
+    margin-block: 20px ;
+}
+input{
+    outline: none;
+    border-color: blue;
+    border-radius: 10px;
+    margin-bottom: 22px;
+}
+.error-message {
+    color: red;
+    margin-top: 7px;
+  }

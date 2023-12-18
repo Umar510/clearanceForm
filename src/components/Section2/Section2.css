@@ -1,0 +1,17 @@
+.heading-sec2 {
+    border-block: 1px solid gray;
+    margin-block: 40px;
+    padding-block: 15px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.row {
+    margin-block: 20px;
+}
+
+input {
+    outline: none;
+    border-color: blue;
+    border-radius: 10px;
+}

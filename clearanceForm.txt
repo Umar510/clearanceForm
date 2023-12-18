@@ -1,0 +1,4 @@
+when we change in any code and chnages saved. What & where these changes occur on randering?
+asynchonours and synchronous
+callback
+async/await

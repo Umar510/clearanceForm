@@ -1,0 +1,17 @@
+.heading-sec6 {
+    border-block: 1px solid gray;
+    margin-block: 40px;
+    padding-block: 15px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.row {
+    margin-block: 30px;
+}
+
+input {
+    outline: none;
+    border-color: rgb(0, 225, 255);
+    border-radius: 10px;
+}
