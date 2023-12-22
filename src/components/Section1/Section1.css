@@ -6,7 +6,7 @@
     text-align: center;
 }
 .row{
-    margin-block: 20px ;
+    margin-block: 10px ;
 }
 input{
     outline: none;
@@ -16,5 +16,5 @@ input{
 }
 .error-message {
     color: red;
-    margin-top: 7px;
+    /* margin-top: 7px; */
   }

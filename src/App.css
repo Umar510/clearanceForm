@@ -10,10 +10,13 @@ input {
   padding: 10px;
   margin-top: 13px;
 }
-
+.row{
+  margin-block: 15px;
+}
 .error-message{
   color: red;
-  margin-top: 7px;
+  margin-top: -14px;
+  margin-bottom: 7%;
 }
 
 .submit-btn {

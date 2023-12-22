@@ -24,11 +24,13 @@ const useValidateInfo = (values) => {
     else if (values.dateOfJoining === "") {
         errors.dateOfJoining = "Enter your Date of Joining";
     }
+    else if (!values.lastWorkingDay==='' && errors.lastWorkingDay === "*Last WORKING Day must be after The DATE of JOINING*") {
+        return errors.lastWorkingDay
+    }
     else if (values.lastWorkingDay === "") {
         errors.lastWorkingDay = "Enter your LAST WORKING DAY";
     }
-
-//2
+    //2
     else if (values.hardCopy === null) {
         errors.hardCopy = "Select one Option!";
     }
@@ -58,7 +60,7 @@ const useValidateInfo = (values) => {
     }
 
 
-//3
+    //3
     else if (values.loanClearance === null) {
 
         errors.loanClearance = "Select one option1 !";
@@ -72,8 +74,9 @@ const useValidateInfo = (values) => {
         errors.loan = "Select one option !";
     }
 
-    
-//4
+
+
+    //4
     else if (values.laptopReturned === null) {
 
         errors.laptopReturned = "Select one option !";
@@ -91,7 +94,7 @@ const useValidateInfo = (values) => {
         errors.attendanceRecord = "Select one option !";
     }
 
-//5
+    //5
     else if (values.vehicleDocuments === null) {
 
         errors.vehicleDocuments = "Select one option !";
@@ -113,7 +116,7 @@ const useValidateInfo = (values) => {
         errors.advanceClearance = "Select one option !";
     }
 
-//6
+    //6
     else if (values.employeeCard === null) {
 
         errors.employeeCard = "Select one option !";

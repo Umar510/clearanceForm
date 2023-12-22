@@ -59,7 +59,7 @@ const Section1 = ({ values, handleChange, handleDate, errors }) => {
             label: 'Date of joining *',
             value: values.dateOfJoining,
             type: 'date',
-            onChange: handleChange,
+            onChange: handleDate,
             error: errors.dateOfJoining,
         },
         {
@@ -67,7 +67,7 @@ const Section1 = ({ values, handleChange, handleDate, errors }) => {
             label: 'Last Working Day *',
             value: values.lastWorkingDay,
             type: 'date',
-            onChange: handleChange,
+            onChange: handleDate,
             error: errors.lastWorkingDay,
         },
 
@@ -82,20 +82,13 @@ const Section1 = ({ values, handleChange, handleDate, errors }) => {
             <div className='row'>
                 {inputData.map((inputData, index) => (
                     <div className='col-6' key={index}>
-
                         <label className='' htmlFor={inputData.id}>{inputData.label}</label>
                         <input className='col-12' type={inputData.type} id={inputData.id} name={inputData.id} value={inputData.value} min={inputData.min} onChange={inputData.onChange} />
-                        
                         {inputData.error && <p className="error-message">{inputData.error} </p>}
                     </div>
                 ))}
             </div>
         </div>
-
     )
 }
 export default Section1;
-
-
-
-

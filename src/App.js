@@ -22,10 +22,10 @@ const App = () => {
     name: '',
     employeeCode: '',
     designation: '',
-    subDepartment: '',
     department: '',
-    dateOfJoining: '',
+    subDepartment: '',
     hod: '',
+    dateOfJoining: '',
     lastWorkingDay: '',
 
     //sec#2
@@ -114,9 +114,8 @@ const App = () => {
   }
 
   useEffect(() => {
-    if (values.dateOfJoining !== '' && values.lastWorkingDay !== '') {
+    // if (values.dateOfJoining !== '' && values.lastWorkingDay !== 
       compareDates(values.lastWorkingDay, values.dateOfJoining);
-    }
   }, [values.dateOfJoining, values.lastWorkingDay])
 
 
@@ -125,11 +124,11 @@ const App = () => {
     if (lastDate < joinDate) {
       setErrors({
         ...errors,
-        lastWorkingDay: 'Last Working Day must be after Date of Joining'
+        lastWorkingDay: '*Last WORKING Day must be after The DATE of JOINING*'
       });
     }
     else {
-      setErrors({ ...errors })
+      setErrors({ ...errors, lastWorkingDay: "" })
     }
   }
 
@@ -147,14 +146,12 @@ const App = () => {
     }
   }
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const err = validate(values);
-    setErrors(validate(values));
+    compareDates()
+    const err = validate(values);
+    setErrors(err);
     if (Object.keys(errors).length !== 0) {
-
       const errorKey = Object.keys(errors)[0];
       document.querySelector(`input[name=${errorKey}]`).scrollIntoView({ behavior: 'smooth' });
       return;
